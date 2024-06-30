@@ -103,6 +103,9 @@ struct Calibration {
   /// SE(3)\f$
   Eigen::aligned_vector<SE3> T_i_c;
 
+  // Initial T_i_mark for mocap
+  SE3 T_i_mark_init;
+
   /// @brief Vector of camera intrinsics. Can store different camera models. See
   /// \ref GenericCamera.
   Eigen::aligned_vector<GenericCamera<Scalar>> intrinsics;
